@@ -1,6 +1,18 @@
+<h2>{{ todo.title }}</h2>
 
-<h2>{{todo.title}}</h2>
 <div>
-    <input type="checkbox" [(ngModel)]="check" [checked]="todo.active" name="check" (click)="onCheck(todo)"  placeholder="done"/><span>Done</span>
+  <p>{{ todo.desc }}</p>
 </div>
-<button type="button" class="btn btn-danger" (click)="onClick(todo)">Danger</button>
+<div>
+  <input
+    type="checkbox"
+    [(ngModel)]="check"
+    [checked]="todo.active"
+    name="check"
+    (click)="onCheck(todo)"
+    placeholder="done"
+  /><span>Done</span>
+</div>
+<button type="button" class="btn btn-danger" (click)="onClick(todo)">
+  Danger
+</button>

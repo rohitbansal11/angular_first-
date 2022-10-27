@@ -1,7 +1,7 @@
 <p>todos works!</p>
 
 <div class="container-fluid">
-  <app-add-todo (addTodo)="AddTodo($event)"></app-add-todo>
+  <app-add-todo (addTodo)="AddTodo($event)" ></app-add-todo>
 
   <ul *ngFor="let todo of todos">
     <li>{{ todo.title }}</li>

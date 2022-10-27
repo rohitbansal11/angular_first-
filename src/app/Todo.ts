@@ -1,5 +1,5 @@
 export class Todo{
-    sno:number |undefined
+    sno:string |undefined
     title:string |undefined
     desc:string |undefined
     active:boolean |undefined

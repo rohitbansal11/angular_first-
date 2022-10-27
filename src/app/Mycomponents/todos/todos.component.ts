@@ -9,6 +9,7 @@ import { Todo } from 'src/app/Todo';
 export class TodosComponent implements OnInit {
   localitem: any;
   todos: Todo[] = [];
+  singleitem:Todo[] = [];
   constructor() {
     this.localitem = localStorage.getItem('todos');
     if (this.localitem == null) {
@@ -38,4 +39,6 @@ export class TodosComponent implements OnInit {
     this.todos[index].active = !this.todos[index].active;
     localStorage.setItem('todos', JSON.stringify(this.todos));
   }
+
+  
 }
