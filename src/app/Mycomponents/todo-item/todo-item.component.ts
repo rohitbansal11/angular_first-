@@ -7,10 +7,11 @@ import { Todo } from 'src/app/Todo';
   styleUrls: ['./todo-item.component.css'],
 })
 export class TodoItemComponent implements OnInit {
-  @Input()
-  todo: Todo = new Todo();
+  check: boolean = false;
+  @Input() todo: Todo = new Todo();
 
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
+  @Output() todoactiveStatus: EventEmitter<Todo> = new EventEmitter();
 
   constructor() {}
 
@@ -19,6 +20,11 @@ export class TodoItemComponent implements OnInit {
   onClick(todo: Todo) {
     console.log('onclick on ckildjfjf ');
     console.log(todo);
-    this.todoDelete.emit(todo)
+    this.todoDelete.emit(todo);
+  }
+
+  onCheck(todo: Todo) {
+    console.log(todo);
+    this.todoactiveStatus.emit(todo);
   }
 }
